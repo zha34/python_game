@@ -8,13 +8,17 @@ typedis
 '''
 import random
 
+#===functions==================================
 
-
-def randWord( rounds ):
-  for i in range(rounds):
-  	question = letter[random.randint(0,25)]
+def randWord( rounds, size ):
+  for i in range(rounds): 
+  	question = ""
+  	for j in range(size):
+  	  question += letter[random.randint(0,25)]
+  	# print(question)
   	yield question
-  	
+
+#==============================================
 
 
 letter = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
@@ -36,13 +40,13 @@ rounds = 5
 rounds = int(rounds)
 print("The number of rounds is: ", rounds)
 
-
+iter = randWord(rounds, size)
 # 1 question per rounds
 for i in range(rounds):
   print("\nRound ", i+1, ":")
   
 
-  question = letter[random.randint(0,25)]
+  question = next(iter)
 
 
   print(question)
