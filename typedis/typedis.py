@@ -29,7 +29,7 @@ rounds = "invalid"
 score = 0
 size = 3
 
-print("\nWelcome to Typedis!\n")
+print("\nWelcome to Typedis! \n")
 
 
 
