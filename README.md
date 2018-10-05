@@ -1,1 +1,1 @@
-# py_game
+# python_game
