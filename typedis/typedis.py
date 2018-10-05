@@ -8,6 +8,13 @@ typedis
 '''
 import random
 
+rounds = "invalid"
+score = 0
+size = 3
+
+letter = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
+      'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 'x', 't', 
+      'u', 'v', 'w', 's', 'y', 'z' ]
 
 
 def randWord( rounds ):
@@ -17,13 +24,9 @@ def randWord( rounds ):
   	
 
 
-letter = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
- 			'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 'x', 't', 
- 			'u', 'v', 'w', 's', 'y', 'z' ]
 
-rounds = "invalid"
-score = 0
-size = 3
+
+
 
 print("\nWelcome to Typedis!\n")
 
@@ -41,9 +44,7 @@ print("The number of rounds is: ", rounds)
 for i in range(rounds):
   print("\nRound ", i+1, ":")
   
-
   question = letter[random.randint(0,25)]
-
 
   print(question)
   answer = input()
